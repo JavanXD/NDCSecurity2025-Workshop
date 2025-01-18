@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oslo Coffee Club - Security Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+    <div class="container my-5">
+        <h1 class="text-center">Oslo Coffee Club</h1>
+        <p class="text-muted text-center">Fix vulnerabilities and explore defences</p>
+
+        <!-- Coffee Order Form -->
+        <div class="card mb-4">
+            <div class="card-header">Place Your Coffee Order</div>
+            <div class="card-body">
+                <form id="orderForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" value="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coffee" class="form-label">Select Coffee</label>
+                        <select id="coffee" class="form-select">
+                            <option value="latte">Latte</option>
+                            <option value="espresso">Espresso</option>
+                            <option value="americano">Americano</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Order Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Orders List (Persistent XSS Vulnerability) -->
+        <div class="card mb-4">
+            <div class="card-header">Current Orders</div>
+            <div class="card-body">
+                <ul id="ordersList" class="list-group">
+                    <li class="list-group-item text-muted">No orders yet</li>
+                </ul>
+            </div>
+
+            <!-- Clear Orders Button -->
+            <div class="mb-4 text-center">
+                <button id="clearOrdersButton" class="btn btn-danger">Clear All Orders</button>
+            </div>
+        </div>
+
+        <!-- Search Section (DOM-based XSS Vulnerability) -->
+        <div class="card mb-4">
+            <div class="card-header">Search Orders</div>
+            <div class="card-body">
+                <form id="searchForm">
+                    <div class="mb-3">
+                        <label for="search" class="form-label">Search by Name</label>
+                        <input type="text" id="search" class="form-control" placeholder="Enter name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <div id="searchResults" class="mt-3"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Order submission (Persistent XSS)
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const coffee = document.getElementById('coffee').value;
+
+            try {
+                const response = await fetch('/api/order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, coffee }),
+                });
+
+                const data = await response.json();
+                alert(data.message);
+                fetchOrders(); // Update orders
+            } catch (err) {
+                alert('Order failed: ' + err.message);
+            }
+        });
+
+        // Fetch and display orders
+        async function fetchOrders() {
+            const ordersList = document.getElementById('ordersList');
+            ordersList.innerHTML = '';
+            const response = await fetch('/api/orders');
+            const orders = await response.json();
+
+            orders.forEach(order => {
+                // Persistent XSS vulnerability: unsanitised data rendered with innerHTML
+                ordersList.innerHTML += `<li class="list-group-item">${order.name} ordered ${order.coffee}</li>`;
+            });
+        }
+
+        // Search orders (DOM-based XSS)
+        document.getElementById('searchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchQuery = document.getElementById('search').value;
+            const searchResults = document.getElementById('searchResults');
+
+            // DOM-based XSS: unsanitised input rendered with innerHTML
+            searchResults.innerHTML = `<p>Search results for: <b>${searchQuery}</b></p>`;
+        });
+
+        // Clear all orders
+        document.getElementById('clearOrdersButton').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/api/clear-orders');
+                const data = await response.json();
+                alert(data.message); // Show success message
+                fetchOrders(); // Refresh the orders list
+            } catch (err) {
+                alert('Failed to clear orders: ' + err.message);
+            }
+        });
+
+        // Fetch orders on page load
+        fetchOrders();
+    </script>
+</body>
+</html>
