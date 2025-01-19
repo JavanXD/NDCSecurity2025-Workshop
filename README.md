@@ -36,5 +36,5 @@ npm start
 - `oslo-coffee-club/public/`: Contains the static front-end assets for the Oslo Coffee Club application.
 - `oslo-coffee-club/app.js`: Contains the back-end code for the Oslo Coffee Club application.
 - `attacks/`: Contains the attack scripts for the workshop.
-- `detect-insecure-practices-helper/`: Contains the helper script to detect insecure practices using `grep` and a custom **Semgrep** rule in the Oslo Coffee Club application. (used in [Challenge 4](./CHALLENGE_4.md))
+- `detect-insecure-practices-helper/`: Contains the helper script to detect insecure practices using `grep` and a custom **Semgrep** rule. (used for [Challenge 4](./CHALLENGE_4.md))
 
