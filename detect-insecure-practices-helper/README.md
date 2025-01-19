@@ -22,7 +22,7 @@ Here’s a simple bash script that automates the detection of insecure JavaScrip
      - `eval`
 
 2. **Run Semgrep:**
-   - Scans the code using Semgrep with a custom `custom-security-rules.yml` ruleset for vulnerabilities.
+   - Scans the code using Semgrep with a custom `custom-security-rules.yml` ruleset.
 
 3. **Extract `<script>` Content from HTML:**
    - Extracts JavaScript from `<script>` tags in `index.html` for targeted analysis.

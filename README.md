@@ -23,19 +23,18 @@ npm install
 npm start
 ```
 
-4.	Open the app in your browser:
-```http
-http://localhost:3000
-```
+4.	Open the app in your browser: `http://localhost:3000`
 
 ### Shared Demo instance
 
-- [Oslo Coffee Club](https://oslo-coffee-club.javan.de/) if you are unable to host it yourself on your computer using NodeJs you can use this instance, but note that you can only attack the instance and not protect it.
+- [Oslo Coffee Club](https://oslo-coffee-club.javan.de/), if you are unable to run it locally using NodeJs you can use this instance, but note that you can only test the attacks on this instance and not apply the defenses to it.
 
 ## Files and Folders
 
+- [`CHALLENGES.md`](./CHALLENGES.md): Contains the activities for the workshop.
 - `oslo-coffee-club/`: Contains the code for the Oslo Coffee Club application.
 - `oslo-coffee-club/public/`: Contains the static front-end assets for the Oslo Coffee Club application.
 - `oslo-coffee-club/app.js`: Contains the back-end code for the Oslo Coffee Club application.
-- `attack/`: Contains the attack scripts for the workshop.
-- `solution/`: Contains the solution scripts for the workshop.
+- `attacks/`: Contains the attack scripts for the workshop.
+- `detect-insecure-practices-helper/`: Contains the helper script to detect insecure practices in the Oslo Coffee Club application.
+
