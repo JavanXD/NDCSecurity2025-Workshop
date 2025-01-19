@@ -98,7 +98,7 @@ app.use((req, res, next) => {
 ---
 
 ### Step 3: Retest the Attack
-1. Reload the malicious page (`http://evil-site.com`).
+1. Reload the malicious page (`attack-clickjacking.html`).
 2. Verify that:
    - The iframe fails to load the Oslo Coffee Club application.
    - Browser developer tools show an error indicating the page cannot be embedded due to `X-Frame-Options` or CSP.
