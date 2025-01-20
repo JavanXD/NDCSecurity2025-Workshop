@@ -10,7 +10,7 @@ Implement Cross-Origin Opener Policy (COOP) headers to prevent cross-origin expl
 ### Exploit Description
 An attacker opens the victim application (`localhost:3000`) in a new tab using `window.open`. Without proper isolation, the attacker can use the `window.opener.location` property to redirect the victim application to a malicious page.
 
-#### Malicious Page (http://evil-site.com)
+#### Malicious Page 
 The attacker creates a malicious page that opens the victim application and redirects it:
 ```html
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ The attacker creates a malicious page that opens the victim application and redi
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evil Site</title>
+    <title>evil-site.com</title>
     <script>
         function attackVictim() {
             const victim = window.open("http://localhost:3000", "_blank");
@@ -103,3 +103,4 @@ app.use((req, res, next) => {
 - [XSLeaks - Cross-Origin Opener Policy](https://xsleaks.dev/docs/defenses/opt-in/coop/)
 - [Web.dev - Why COOP and COEP Are Important](https://web.dev/articles/why-coop-coep/)
 - [Web.dev - Securely hosting user data in modern web applications ](https://web.dev/articles/securely-hosting-user-data)
+- [MDN Web Dev - Cross-Origin-Opener-Policy]()https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy

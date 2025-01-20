@@ -101,7 +101,6 @@ Content-Security-Policy: default-src 'self'; script-src 'strict-dynamic' 'nonce-
 ---
 
 ## Further Resources
-
 - [web.dev - Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/articles/strict-csp)
 - [MDN Web Docs - Content-Security-Policy sript-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic)
 - [caniuse - strict-dynamic](https://caniuse.com/?search=strict-dynamic)
