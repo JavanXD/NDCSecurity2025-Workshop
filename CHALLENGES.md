@@ -11,7 +11,7 @@
 - [Challenge 3](./CHALLENGE_3.md): Leveraging `strict-dynamic` for Modern Script Management
 - [Challenge 4](./CHALLENGE_4.md): Retrofitting **Trusted Types** for DOM-Based XSS
 - [Challenge 5](./CHALLENGE_5.md): Clickjacking Prevention with `X-Frame-Options` and CSP
-- Bonus: [Challenge 6](./CHALLENGE_6.md): Preventing Cross-Origin Communication with **COOP/COEP**
+- Bonus: [Challenge 6](./CHALLENGE_6.md): Preventing Cross-Origin Exploitation via `window.opener`
 
 ## Payloads
 
