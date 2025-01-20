@@ -33,8 +33,8 @@ npm start
 
 - [`CHALLENGES.md`](./CHALLENGES.md): Contains the activities for the workshop.
 - `oslo-coffee-club/`: Contains the code for the Oslo Coffee Club application.
-- `oslo-coffee-club/public/`: Contains the static front-end assets for the Oslo Coffee Club application.
-- `oslo-coffee-club/app.js`: Contains the back-end code for the Oslo Coffee Club application.
-- `attacks/`: Contains the attack scripts for the workshop.
-- `detect-insecure-practices-helper/`: Contains the helper script to detect insecure practices using `grep` and a custom **Semgrep** rule. (used for [Challenge 4](./CHALLENGE_4.md))
+    - `oslo-coffee-club/public/`: Contains the static front-end assets for the Oslo Coffee Club application.
+    - `oslo-coffee-club/app.js`: Contains the back-end code for the Oslo Coffee Club application.
+- `attacks/`: Contains the attack scripts for the challenges.
+- [`detect-insecure-practices-helper/`](./detect-insecure-practices-helper/README.md): Contains the helper script to detect insecure practices using `grep` and a custom **Semgrep** rule. (used for [Challenge 4](./CHALLENGE_4.md))
 

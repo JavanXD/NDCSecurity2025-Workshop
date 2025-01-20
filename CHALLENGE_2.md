@@ -96,7 +96,7 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' h
 
 ---
 
-### Bonus Challenge 2.1: Evaluating External Scripts from jsdelivr.net
+### Bonus Challenge 2.1 (optional): Evaluating External Scripts from jsdelivr.net
 
 #### Step 4: The Risk of Hosting JavaScript on jsdelivr.net
 

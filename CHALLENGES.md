@@ -6,14 +6,12 @@
 
 ## Challenges
 
-- [Challenge 1](./CHALLENGE_1.md): Attack **CSRF** and Protect Against It
+- [Challenge 1](./CHALLENGE_1.md): Perform a **CSRF** attack and then implement protections against it
 - [Challenge 2](./CHALLENGE_2.md): Starting with an Insecure **CSP** and Migrating to a Secure One
 - [Challenge 3](./CHALLENGE_3.md): Leveraging `strict-dynamic` for Modern Script Management
 - [Challenge 4](./CHALLENGE_4.md): Retrofitting **Trusted Types** for DOM-Based XSS
 - [Challenge 5](./CHALLENGE_5.md): Clickjacking Prevention with `X-Frame-Options` and CSP
-- [Challenge 6](./CHALLENGE_6.md): Preventing Cross-Origin Communication with **COOP/COEP**
-
-
+- Bonus: [Challenge 6](./CHALLENGE_6.md): Preventing Cross-Origin Communication with **COOP/COEP**
 
 ## Payloads
 
@@ -25,4 +23,4 @@
     ```html
     Name<img src="#" onerror="const script = document.createElement('script'); script.src = './useruploads/attack.js'; document.body.appendChild(script);" alt="XSS2">
     ```
-- Attack files can be found in the `attacks` directory.
+- Attack files can be found in the [`attacks`](./attacks/) directory.

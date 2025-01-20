@@ -1,4 +1,4 @@
-# Challenge 1: Attack CSRF and Protect Against It
+# Challenge 1: Perform a CSRF attack and then implement protections against it
 
 ## Objective
 Implement a server-side check to prevent CSRF attacks using the `Sec-Fetch-Site` header.
@@ -8,8 +8,8 @@ Implement a server-side check to prevent CSRF attacks using the `Sec-Fetch-Site`
 ## Attack Scenario
 
 1. **Simulate a CSRF Attack**:
-   - Use the provided files `attack-csrf-cors.html` and `attack-csrf-img.html` to simulate CSRF attacks.
-     - Both files are available in the `attack/` folder and demonstrate different types of CSRF attacks.
+   - Use the provided files [`attack-csrf-cors.html`](./attacks/attack-csrf-cors.html) and [`attack-csrf-img.html`](./attacks/attack-csrf-img.html) to simulate CSRF attacks.
+     - Both files are available in the [`attacks`](./attacks/)  folder and demonstrate different types of CSRF attacks.
    - Verify the attack success:
      - A successful attack allows the attacker to place an order on behalf of the user without their consent.
      - In the Oslo Coffee Club application, check the orders list to confirm if a new order was added without user interaction.
@@ -37,7 +37,7 @@ app.use('/api', (req, res, next) => {
 
 ### Step 2: Retest the CSRF Attacks
 
-1. Repeat the CSRF attacks using `attack1-csrf-cors.html` and `attack2-img-img.html`.
+1. Repeat the CSRF attacks using [`attack-csrf-cors.html`](./attacks/attack-csrf-cors.html) and [`attack-csrf-img.html`](./attacks/attack-csrf-img.html).
 2. Verify that:
    - The server rejects unauthorized requests with a 403 status.
    - The orders list remains unchanged, confirming the attack was unsuccessful.
