@@ -92,13 +92,14 @@ app.use((req, res, next) => {
 
 ---
 
-## Key References
-- [XSLeaks - Cross-Origin Opener Policy](https://xsleaks.dev/docs/defenses/opt-in/coop/)
-- [Why COOP and COEP Are Important](https://web.dev/articles/why-coop-coep/)
-
----
-
 ## Key Takeaways
 - COOP prevents `window.opener` exploitation by isolating browsing contexts.
 - Testing COOP implementation is critical to ensure workflows are not unintentionally broken.
 - Use `same-origin-allow-popups` for incremental adoption in legacy applications.
+
+---
+
+## Further Resources
+- [XSLeaks - Cross-Origin Opener Policy](https://xsleaks.dev/docs/defenses/opt-in/coop/)
+- [Web.dev - Why COOP and COEP Are Important](https://web.dev/articles/why-coop-coep/)
+- [Web.dev - Securely hosting user data in modern web applications ](https://web.dev/articles/securely-hosting-user-data)

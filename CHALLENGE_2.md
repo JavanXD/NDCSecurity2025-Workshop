@@ -151,4 +151,9 @@ Your page currently includes a script hosted on jsdelivr.net for Bootstrap funct
 - External CDNs like jsdelivr.net introduce a trust dependency.
 - Mitigate risks by using SRI, strict CSPs, or self-hosting scripts.
 
+---
 
+## Further Resources
+- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+- [MDN Web Docs - Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [Web.dev - Security headers quick reference](https://web.dev/articles/security-headers#csp)

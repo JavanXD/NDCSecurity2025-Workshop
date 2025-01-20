@@ -60,7 +60,7 @@ The attacker hosts the following malicious page to perform a clickjacking attack
 (see [`attacks/attack-clickjacking.html`](./attacks/attack-clickjacking.html))
 
 ### Steps to Reproduce
-1. Open the malicious page file `/attacks/attack-clickjacking.html` in a browser.
+1. Open the malicious page file [`attacks/attack-clickjacking.html`](./attacks/attack-clickjacking.html) in a browser.
 2. Visit the malicious page while your Oslo Coffee Club app is running on `http://localhost:3000`.
 3. Interact with the fake button on the malicious page.
    - The iframe overlaps the fake button, capturing clicks intended for the real application.

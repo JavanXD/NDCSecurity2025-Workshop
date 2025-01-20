@@ -60,3 +60,8 @@ app.use('/api', (req, res, next) => {
      - Simplified management for large-scale systems.
      - Reduces repetitive implementation in multiple services.
 
+---
+
+## Further Resources
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata)
+- [MDN Web Dev - Sec-Fetch-Site](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site)

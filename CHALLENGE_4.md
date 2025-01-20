@@ -122,3 +122,7 @@ const policy = TrustedTypes.createPolicy('default', {
 - Could Trusted Types policies replace refactoring entirely in legacy applications?
 - How can automation tools like Semgrep assist in scaling such refactors?
 
+---
+
+## Further Resources
+- [caniuse - require-trusted-types-for](https://caniuse.com/?search=require-trusted-types-for)
