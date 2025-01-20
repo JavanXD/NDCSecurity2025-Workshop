@@ -57,7 +57,7 @@ The attacker hosts the following malicious page to perform a clickjacking attack
 </body>
 </html>
 ```
-(see `attacks/attack-clickjacking.html`)
+(see [`attacks/attack-clickjacking.html`](./attacks/attack-clickjacking.html))
 
 ### Steps to Reproduce
 1. Open the malicious page file `/attacks/attack-clickjacking.html` in a browser.

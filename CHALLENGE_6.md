@@ -36,7 +36,7 @@ The attacker creates a malicious page that opens the victim application and redi
 </body>
 </html>
 ```
-(see `attacks/attack-xs-leakcoop.html`)
+(see [`attacks/attack-xs-leak-coop.html`](./attacks/attack-xs-leak-coop.html))
 
 ---
 
