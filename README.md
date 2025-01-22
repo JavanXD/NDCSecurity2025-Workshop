@@ -1,6 +1,8 @@
 
 # Oslo Coffee Club - Workshop
 
+Slides can be found [here](./presentation/2025-01-NDCSecurity-Rasokat-Workshop-Start_Eliminating_Bug_Classes_at_Scale.pdf).
+
 ## Prerequisites
 
 ### Option 1: Using Node.js
