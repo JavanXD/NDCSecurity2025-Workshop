@@ -3,7 +3,7 @@
 
 Slides can be found [here](./docs/2025-01-NDCSecurity-Rasokat-Workshop-Start_Eliminating_Bug_Classes_at_Scale.pdf).
 
-<img src="./docs/oslo-coffee-club-screenshot.png" width="450"/>
+<img src="./docs/oslo-coffee-club-screenshot.png" width="650"/>
 
 ## Prerequisites
 
