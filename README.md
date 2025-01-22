@@ -1,7 +1,9 @@
 
 # Oslo Coffee Club - Workshop
 
-Slides can be found [here](./presentation/2025-01-NDCSecurity-Rasokat-Workshop-Start_Eliminating_Bug_Classes_at_Scale.pdf).
+Slides can be found [here](./docs/2025-01-NDCSecurity-Rasokat-Workshop-Start_Eliminating_Bug_Classes_at_Scale.pdf).
+
+<img src="./docs/oslo-coffee-club-screenshot.png" width="450"/>
 
 ## Prerequisites
 
