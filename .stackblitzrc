@@ -1,0 +1,4 @@
+{
+  "startCommand": "cd oslo-coffee-club && npm install && npm start",
+  "installCommand": "cd oslo-coffee-club && npm install"
+}
