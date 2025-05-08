@@ -14,7 +14,7 @@ Slides can be found [here](./docs/2025-01-NDCSecurity-Rasokat-Workshop-Start_Eli
 - [Docker](https://www.docker.com/) installed on your system.
 
 ### Option 3: Using StackBlitz WebContainers
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/JavanXD/NDCSecurity2025-Workshop?projectPath=lab) - just use your browser, that's it. 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/JavanXD/NDCSecurity2025-Workshop)
 
 
 ---
